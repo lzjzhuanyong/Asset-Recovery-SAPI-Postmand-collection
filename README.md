@@ -9,15 +9,15 @@ Using this method could submit the request for retrieving the unlisted coins tha
 
 - Click the `Import` button. On Postman for Mac, for example, the button is at the top left:
 
-<img width="1220" height="761" alt="image1" src="https://github.com/user-attachments/assets/76a0b9e4-41b2-4552-be35-cfb807aedd77" />
+<img width="75%" height="75%" alt="image1" src="https://github.com/user-attachments/assets/76a0b9e4-41b2-4552-be35-cfb807aedd77" />
 
 - On the `Import` pop-up page, select the `Folder` tab. Click the `Choose folder from your computer` button and choose the root folder of the downloaded repository.
 
-<img width="656" height="555" alt="image2" src="https://github.com/user-attachments/assets/a9297faa-7cf8-4552-92e0-90e592439dac" />
+<img width="65%" height="65%" alt="image2" src="https://github.com/user-attachments/assets/a9297faa-7cf8-4552-92e0-90e592439dac" />
 
-- Select which collections and environments you would like to import and click the `Import` button.
+- With the same step import the environments you would like to import and click the `Import` button.
 
-<img width="50%" height="50%" alt="image" src="https://user-images.githubusercontent.com/6247197/235364587-88f7095c-9e4d-491b-82cf-24a7bee61be3.png">
+<img width="75%" height="75%" alt="截屏2026-01-21 22 13 33" src="https://github.com/user-attachments/assets/aee4d750-756b-44f8-982d-fd02ed09db69" />
 
 - Select the `Environments` tab on the left, choose an environment, and set your Api Key and Secret Key by changing the `Current Value` column (see screenshot);
 (The `Timestamp`, `nonce`, `Signature`, `Initial Value` fields can be left empty as they’ll be automatically filled by Postman when sending a request.)
