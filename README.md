@@ -9,11 +9,11 @@ Using this method could submit the request for retrieving the unlisted coins tha
 
 - Click the `Import` button. On Postman for Mac, for example, the button is at the top left:
 
-<img width="1220" height="761" src="https://github.com/user-attachments/assets/76a0b9e4-41b2-4552-be35-cfb807aedd77" />
+<img width="1220" height="761" alt="image1" src="https://github.com/user-attachments/assets/76a0b9e4-41b2-4552-be35-cfb807aedd77" />
 
 - On the `Import` pop-up page, select the `Folder` tab. Click the `Choose folder from your computer` button and choose the root folder of the downloaded repository.
 
-<img width="50%" height="50%" alt="image" src="https://user-images.githubusercontent.com/6247197/235364514-d05007e6-9bd9-4e6e-b77d-de77324f8da1.png">
+<img width="656" height="555" alt="image2" src="https://github.com/user-attachments/assets/a9297faa-7cf8-4552-92e0-90e592439dac" />
 
 - Select which collections and environments you would like to import and click the `Import` button.
 
