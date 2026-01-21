@@ -1,0 +1,512 @@
+{
+  "info": {
+    "_postman_id": "14f85be4-8440-45c7-960c-dc0de16c413e",
+    "name": "Asset recovery",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "22635297"
+  },
+  "item": [
+    {
+      "name": "Pre-check",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "X-MBX-APIKEY",
+            "value": "{{binance-api-key}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 0.01,\n  \"depositId\": \"13231\",\n  \"coin\": \"UL_ETH_SOL\",\n  \"network\": \"ETH\",\n  \"toAddress\": \"0xdd\",\n  \"txId\": \"0xdd\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/sapi/v1/capital/deposit-appeal/appeal-pre-check?recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "sapi",
+            "v1",
+            "capital",
+            "deposit-appeal",
+            "appeal-pre-check"
+          ],
+          "query": [
+            {
+              "key": "recvWindow",
+              "value": "60000"
+            },
+            {
+              "key": "timestamp",
+              "value": "{{timestamp}}"
+            },
+            {
+              "key": "signature",
+              "value": "{{signature}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request Submission",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "X-MBX-APIKEY",
+            "value": "{{binance-api-key}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"requestId\": \"\",\n    \"targetAddress\": \"\",\n    \"targetAddressTag\": \"\",\n    \"expectedAmount\": 8 \n}"
+        },
+        "url": {
+          "raw": "{{url}}/sapi/v1/capital/deposit-appeal/appeal-confirm?recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "sapi",
+            "v1",
+            "capital",
+            "deposit-appeal",
+            "appeal-confirm"
+          ],
+          "query": [
+            {
+              "key": "recvWindow",
+              "value": "60000"
+            },
+            {
+              "key": "timestamp",
+              "value": "{{timestamp}}"
+            },
+            {
+              "key": "signature",
+              "value": "{{signature}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get the predefined URL of the uploaded file",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "X-MBX-APIKEY",
+            "value": "{{binance-api-key}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/sapi/v1/capital/deposit-appeal/material-prepare?recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "sapi",
+            "v1",
+            "capital",
+            "deposit-appeal",
+            "material-prepare"
+          ],
+          "query": [
+            {
+              "key": "recvWindow",
+              "value": "60000",
+              "type": "text"
+            },
+            {
+              "key": "timestamp",
+              "value": "{{timestamp}}",
+              "type": "text"
+            },
+            {
+              "key": "signature",
+              "value": "{{signature}}",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Appeal material bind or modify the refund information",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "X-MBX-APIKEY",
+            "value": "{{binance-api-key}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"requestId\": \"\",\n    \"requestType\": 1,\n    \"materialName\": \"\",\n    \"materialKey\":\"\",\n    \"refundAddress\": \"\",\n    \"refundAddressTag\": \"\" //if no need, should delete this line\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/sapi/v1/capital/deposit-appeal/appeal-material-bind?recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "sapi",
+            "v1",
+            "capital",
+            "deposit-appeal",
+            "appeal-material-bind"
+          ],
+          "query": [
+            {
+              "key": "recvWindow",
+              "value": "60000"
+            },
+            {
+              "key": "timestamp",
+              "value": "{{timestamp}}"
+            },
+            {
+              "key": "signature",
+              "value": "{{signature}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cancel recovery appeal",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "X-MBX-APIKEY",
+            "value": "{{binance-api-key}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/sapi/v1/capital/deposit-appeal/appeal-cancel?requestId&requestType=1&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "sapi",
+            "v1",
+            "capital",
+            "deposit-appeal",
+            "appeal-cancel"
+          ],
+          "query": [
+            {
+              "key": "requestId",
+              "value": null,
+              "type": "text"
+            },
+            {
+              "key": "requestType",
+              "value": "1",
+              "description": "Types: 1=Retrieve Crypto Deposit with Wrong or Missing Tag/Memo, 2=Retrieve the Deposit that Hasn’t Arrived ",
+              "type": "text"
+            },
+            {
+              "key": "recvWindow",
+              "value": "60000"
+            },
+            {
+              "key": "timestamp",
+              "value": "{{timestamp}}"
+            },
+            {
+              "key": "signature",
+              "value": "{{signature}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Query to retrieve application history",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "X-MBX-APIKEY",
+            "value": "{{binance-api-key}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/sapi/v1/capital/deposit-appeal/appeal-history?pageIndex&pageSize&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "sapi",
+            "v1",
+            "capital",
+            "deposit-appeal",
+            "appeal-history"
+          ],
+          "query": [
+            {
+              "key": "pageIndex",
+              "value": null,
+              "description": "default 0",
+              "type": "text"
+            },
+            {
+              "key": "pageSize",
+              "value": null,
+              "description": "default 50",
+              "type": "text"
+            },
+            {
+              "key": "recvWindow",
+              "value": "60000"
+            },
+            {
+              "key": "timestamp",
+              "value": "{{timestamp}}"
+            },
+            {
+              "key": "signature",
+              "value": "{{signature}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Query txId-based Deposit info",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/sapi/v1/capital/deposit-appeal/inquiry-txId?txId&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "sapi",
+            "v1",
+            "capital",
+            "deposit-appeal",
+            "inquiry-txId"
+          ],
+          "query": [
+            {
+              "key": "txId",
+              "value": null
+            },
+            {
+              "key": "recvWindow",
+              "value": "60000"
+            },
+            {
+              "key": "timestamp",
+              "value": "{{timestamp}}"
+            },
+            {
+              "key": "signature",
+              "value": "{{signature}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Confirm Fund Address",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "X-MBX-APIKEY",
+            "value": "{{binance-api-key}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/sapi/v1/capital/deposit-appeal/confirm-fund-address?recvWindow=60000&timstamp={{timestamp}}&signature={{signature}}",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "sapi",
+            "v1",
+            "capital",
+            "deposit-appeal",
+            "confirm-fund-address"
+          ],
+          "query": [
+            {
+              "key": "recvWindow",
+              "value": "60000"
+            },
+            {
+              "key": "timstamp",
+              "value": "{{timestamp}}"
+            },
+            {
+              "key": "signature",
+              "value": "{{signature}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          "",
+          "    const ts = Date.now();",
+          "    pm.environment.set(\"timestamp\", ts);",
+          "",
+          "    let paramsObject = {};",
+          "",
+          "    const binance_api_secret = pm.environment.get(\"binance-api-secret\");",
+          "",
+          "    const parameters = pm.request.url.query;",
+          "",
+          "    parameters.map((param) => {",
+          "        if (param.key != 'signature' && ",
+          "            !is_empty(param.value) &&",
+          "            !is_disabled(param.disabled)) {",
+          "                paramsObject[param.key] = param.value;",
+          "                //console.log(encodeURIComponent(param.value));",
+          "                //pm.environment.set(param.key, encodeURIComponent(param.value));",
+          "        }",
+          "    })",
+          "",
+          "    Object.assign(paramsObject, {'timestamp': ts});",
+          "",
+          "    if (binance_api_secret) {",
+          "        const queryString = Object.keys(paramsObject).map((key) => {",
+          "            return `${key}=${paramsObject[key]}`;",
+          "        }).join('&');",
+          "        console.log(queryString);",
+          "        const signature = CryptoJS.HmacSHA256(queryString, binance_api_secret).toString();",
+          "        pm.environment.set(\"signature\", signature);",
+          "    }",
+          "",
+          "    function is_disabled(str) {",
+          "        return str == true;",
+          "    }",
+          "",
+          "    function is_empty(str) {",
+          "        if (typeof str == 'undefined' ||",
+          "            !str || ",
+          "            str.length === 0 || ",
+          "            str === \"\" ||",
+          "            !/[^\\s]/.test(str) ||",
+          "            /^\\s*$/.test(str) ||",
+          "            str.replace(/\\s/g,\"\") === \"\")",
+          "        {",
+          "            return true;",
+          "        }",
+          "        else",
+          "        {",
+          "            return false;",
+          "        }",
+          "    }",
+          "",
+          "",
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
