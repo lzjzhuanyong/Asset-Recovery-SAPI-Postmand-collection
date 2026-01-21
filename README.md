@@ -13,7 +13,7 @@ Using this method could submit the request for retrieving the unlisted coins tha
 
 - On the `Import` pop-up page, select the `Folder` tab. Click the `Choose folder from your computer` button and choose the root folder of the downloaded repository.
 
-<img width="50%" height="50%" alt="image2" src="https://github.com/user-attachments/assets/a9297faa-7cf8-4552-92e0-90e592439dac" />
+<img width="40%" height="40%" alt="image2" src="https://github.com/user-attachments/assets/a9297faa-7cf8-4552-92e0-90e592439dac" />
 
 - With the same step import the environments you would like to import and click the `Import` button.
 
