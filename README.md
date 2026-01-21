@@ -26,16 +26,12 @@ Using this method could submit the request for retrieving the unlisted coins tha
 
 - Select your newly-added environment from the environment dropdown menu. On Mac, this is at top right, to the left of the eye icon.
 
-<img width="60%" height="60%" alt="image" src="https://user-images.githubusercontent.com/6247197/235367369-38120d2d-753c-477f-ac9c-29556c338342.png">
+<img width="60%" height="60%" alt="image5" src="https://github.com/user-attachments/assets/e4d2a1e6-a9cf-4b8f-ac27-dc0fa7bb7b0e" />
 
 
 ## How to get the api key and secret key of Binance Pay
 
-Binance Pay API key and secret key is different from the Binance Public endpoints api key.
-
-Get the API key and secret key of the Binance Pay account on the Binance Pay merchant dashboard.
-
-<img src="https://user-images.githubusercontent.com/6247197/235358075-948cb4b4-04fd-4532-91a5-cf73b8763199.png" alt="image1" width="75%" height="75%">
+Binance API key and secret key could get from the api management page in your Binance Account.
 
 ## Postman safety practices
 The following practices are advised to secure your account's safety:
