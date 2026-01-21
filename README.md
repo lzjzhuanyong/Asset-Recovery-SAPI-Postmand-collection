@@ -8,9 +8,9 @@ Using this method could submit the request for retrieving the unlisted coins tha
 - Download the `Asset-Recovery-SAPI-Postmand-collection` repository.
 
 - Click the `Import` button. On Postman for Mac, for example, the button is at the top left:
-![Uploading image.png…]()
+<img width="2440" height="1522" alt="image" src="https://github.com/user-attachments/assets/fa647329-e3c9-416b-93f8-f1d2715dd281.png" width="75%" height="75%"/>
 
-<img src="https://user-images.githubusercontent.com/6247197/235359073-4fe423e3-fd0e-472a-b9f3-8b429c172b74.png" alt="image2" width="75%" height="75%">
+<img src="https://user-images.githubusercontent.com/6247197/235359073-4fe423e3-fd0e-472a-b9f3-8b429c172b74.png" alt="image2" >
 
 - On the `Import` pop-up page, select the `Folder` tab. Click the `Choose folder from your computer` button and choose the root folder of the downloaded repository.
 
