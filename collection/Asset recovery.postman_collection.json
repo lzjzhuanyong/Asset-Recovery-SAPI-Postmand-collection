@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "14f85be4-8440-45c7-960c-dc0de16c413e",
+    "_postman_id": "532e3741-0bdd-4510-a390-b978f0779653",
     "name": "Asset recovery",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "22635297"
@@ -79,7 +79,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"requestId\": \"\",\n    \"targetAddress\": \"\",\n    \"targetAddressTag\": \"\",\n    \"expectedAmount\": 8 \n}"
+          "raw": "{\n    \"requestId\": \"\",\n    \"targetAddress\": \"\",\n    \"targetAddressTag\": \"\", //if no need, should delete this line\n    \"expectedAmount\": 8 \n}"
         },
         "url": {
           "raw": "{{url}}/sapi/v1/capital/deposit-appeal/appeal-confirm?recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
@@ -151,18 +151,15 @@
           "query": [
             {
               "key": "recvWindow",
-              "value": "60000",
-              "type": "text"
+              "value": "60000"
             },
             {
               "key": "timestamp",
-              "value": "{{timestamp}}",
-              "type": "text"
+              "value": "{{timestamp}}"
             },
             {
               "key": "signature",
-              "value": "{{signature}}",
-              "type": "text"
+              "value": "{{signature}}"
             }
           ]
         }
@@ -255,14 +252,12 @@
           "query": [
             {
               "key": "requestId",
-              "value": null,
-              "type": "text"
+              "value": null
             },
             {
               "key": "requestType",
               "value": "1",
-              "description": "Types: 1=Retrieve Crypto Deposit with Wrong or Missing Tag/Memo, 2=Retrieve the Deposit that Hasn’t Arrived ",
-              "type": "text"
+              "description": "Types: 1=Retrieve Crypto Deposit with Wrong or Missing Tag/Memo, 2=Retrieve the Deposit that Hasn’t Arrived "
             },
             {
               "key": "recvWindow",
@@ -403,6 +398,15 @@
             "type": "text"
           }
         ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"depositId\": \"\",\n    \"address\": \"\",\n    \"addressTag\": \"\" //if no need, should delete this line\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
           "raw": "{{url}}/sapi/v1/capital/deposit-appeal/confirm-fund-address?recvWindow=60000&timstamp={{timestamp}}&signature={{signature}}",
           "host": [
