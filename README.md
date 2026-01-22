@@ -29,7 +29,7 @@ Using this method could submit the request for retrieving the unlisted coins tha
 <img width="60%" height="60%" alt="image5" src="https://github.com/user-attachments/assets/e4d2a1e6-a9cf-4b8f-ac27-dc0fa7bb7b0e" />
 
 
-## How to get the api key and secret key of Binance Pay
+## How to get the api key and secret key of Binance
 
 Binance API key and secret key could get from the api management page in your Binance Account.
 
